@@ -5,6 +5,11 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+server.get('*', (req, res) => {
+  res.send('Hello World! Your server is working on Vercel.');
+});
+
+module.exports = server;
 
 // API se data aur images fetch karna
 app.get('/products', async (req, res) => {
